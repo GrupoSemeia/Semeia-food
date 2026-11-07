@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta Comercial — Yracema Gestão | Grupo Semeia Digital</title>
+<style>
+  :root {
+    --navy-900:#000b1a; --navy-800:#00152e; --navy-700:#0d2545;
+    --gold:#ffc61a; --blue:#0b5cc4; --green:#0a9a5a; --mist:#b0c4de;
+    --ink:#10243f; --muted:#5b6b82; --line:#dbe3ee; --paper:#ffffff; --soft:#f3f6fb;
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body { margin:0; font:16px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif; color:var(--ink); background:var(--soft); }
+  .page { max-width:920px; margin:0 auto; background:var(--paper); }
+  img { max-width:100%; }
+
+  /* Capa */
+  .cover { background:var(--navy-900); color:#fff; }
+  .cover img.banner { display:block; width:100%; }
+  .cover .title { padding:36px 56px 48px; background:linear-gradient(180deg,var(--navy-900),var(--navy-800)); }
+  .eyebrow { letter-spacing:.22em; font-size:12px; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  .cover h1 { margin:10px 0 6px; font-size:40px; line-height:1.15; letter-spacing:-.01em; }
+  .cover h1 span { color:var(--gold); }
+  .cover p.lead { margin:0; color:var(--mist); font-size:18px; max-width:640px; }
+  .meta { display:flex; flex-wrap:wrap; gap:28px; margin-top:28px; padding-top:20px; border-top:1px solid rgba(176,196,222,.25); font-size:14px; color:var(--mist); }
+  .meta b { display:block; color:#fff; font-size:15px; }
+
+  /* Seções */
+  section { padding:44px 56px 8px; }
+  .sec-head { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+  .num { flex:none; width:38px; height:38px; border-radius:50%; background:var(--navy-800); color:var(--gold); font-weight:800; display:grid; place-items:center; }
+  h2 { margin:0; font-size:26px; color:var(--navy-800); letter-spacing:-.01em; }
+  h3 { margin:26px 0 10px; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); }
+  p { margin:0 0 12px; } ul, ol { margin:0 0 14px; padding-left:22px; } li { margin-bottom:6px; }
+  .sec-head, .rule { break-after:avoid; } .rule { height:4px; width:64px; border-radius:2px; background:linear-gradient(90deg,var(--blue),var(--green),var(--gold)); margin:6px 0 18px; }
+
+  .callout { background:var(--navy-800); color:#fff; border-radius:14px; padding:22px 26px; margin:18px 0; }
+  .callout b { color:var(--gold); }
+
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0; }
+  .card { border:1px solid var(--line); border-radius:14px; padding:16px 18px; background:#fff; break-inside:avoid; page-break-inside:avoid; border-top:4px solid var(--blue); }
+  .card.g { border-top-color:var(--green); } .card.y { border-top-color:var(--gold); }
+  .card h4 { margin:0 0 6px; font-size:16px; color:var(--navy-800); }
+  .card h4 small { display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:2px; }
+  .card p { font-size:14.5px; color:#2b3d57; margin:0; }
+  .card.full { grid-column:1 / -1; }
+
+  .pain { display:grid; gap:10px; margin:12px 0; }
+  .pain div { background:var(--soft); border-left:4px solid var(--gold); padding:10px 14px; border-radius:0 10px 10px 0; font-size:15px; break-inside:avoid; }
+  .pain b { color:var(--navy-800); }
+
+  /* Linha do tempo */
+  .timeline { display:grid; grid-template-columns:repeat(5,1fr); gap:0; margin:22px 0 10px; position:relative; }
+  .timeline::before { content:""; position:absolute; top:19px; left:10%; right:10%; height:3px; background:linear-gradient(90deg,var(--blue),var(--green),var(--gold)); }
+  .step { text-align:center; padding:0 6px; position:relative; break-inside:avoid; }
+  .dot { width:40px; height:40px; border-radius:50%; margin:0 auto 10px; background:var(--navy-800); color:var(--gold); font-weight:800; display:grid; place-items:center; border:3px solid #fff; position:relative; }
+  .step b { display:block; font-size:13px; color:var(--navy-800); }
+  .step span { font-size:12.5px; color:var(--muted); line-height:1.4; display:block; margin-top:4px; }
+
+  /* Preços */
+  .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:16px 0; }
+  .price { border-radius:16px; padding:20px; background:var(--navy-800); color:#fff; break-inside:avoid; }
+  .price.alt { background:var(--navy-700); } .price.hl { background:linear-gradient(160deg,var(--blue),var(--navy-800)); }
+  .price small { color:var(--mist); font-size:12px; letter-spacing:.1em; text-transform:uppercase; }
+  .price .v { font-size:30px; font-weight:800; color:var(--gold); margin:6px 0 2px; letter-spacing:-.01em; }
+  .price .v i { font-style:normal; font-size:14px; color:var(--mist); font-weight:500; }
+  .price p { font-size:13.5px; color:var(--mist); margin:8px 0 0; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 18px; font-size:14.5px; }
+  th { background:var(--navy-800); color:#fff; text-align:left; padding:10px 12px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+  td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:nth-child(even) td { background:var(--soft); } tr.total td { background:#fff7db; font-weight:700; border-top:2px solid var(--gold); }
+  tr { break-inside:avoid; }
+
+  .sign { display:grid; grid-template-columns:1fr 1fr; gap:36px; margin:34px 0 8px; }
+  .sign div { border-top:1px solid var(--ink); padding-top:6px; font-size:13px; color:var(--muted); }
+
+  footer { margin-top:40px; background:var(--navy-900); color:var(--mist); padding:26px 56px; display:flex; align-items:center; gap:18px; font-size:13px; }
+  footer img { width:54px; height:54px; border-radius:50%; }
+  footer b { color:#fff; display:block; font-size:14px; } footer em { color:var(--gold); font-style:normal; font-weight:700; }
+
+  @media (max-width:720px) {
+    section, .cover .title, footer { padding-left:22px; padding-right:22px; }
+    .cover h1 { font-size:30px; } .grid, .price-grid, .sign { grid-template-columns:1fr; }
+    .timeline { grid-template-columns:1fr; gap:14px; } .timeline::before { display:none; }
+    .step { display:flex; gap:12px; text-align:left; align-items:flex-start; } .dot { margin:0; flex:none; }
+  }
+  @page { size:A4; margin:0; }
+  @media print { body { background:#fff; font-size:14.5px; line-height:1.5; } .nb { break-inside:avoid; } table, .price-grid { break-inside:avoid; } h3 { break-after:avoid; } .cover .title { padding-top:22px; } .cover h1 { font-size:34px; } .page { max-width:none; } section { padding:22px 46px 2px; } .sec-head { margin-bottom:10px; } h3 { margin-top:16px; } .cover .title { padding:28px 46px 36px; } h2 { break-after:avoid; } .pb { break-before:page; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CAPA -->
+  <div class="cover">
+    <img class="banner" src="assets/banner-semeia.jpg" alt="Grupo Semeia Digital — Tecnologia que conecta. Propósito que transforma.">
+    <div class="title">
+      <div class="eyebrow">Proposta comercial</div>
+      <h1>Yracema <span>Gestão</span></h1>
+      <p class="lead">Pedido de produção, fechamento de caixa e relatórios num só sistema, do celular do gerente ao painel da diretoria.</p>
+      <div class="meta">
+        <div>Preparada para<b>Hot Dog Yracema</b></div>
+        <div>Responsável<b>Guilherme Klucovski, sócio</b></div>
+        <div>Data<b>07 de novembro de 2026</b></div>
+        <div>Elaborada por<b>Grupo Semeia Digital</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <section class="nb">
+    <div class="sec-head"><div class="num">1</div><h2>Apresentação</h2></div><div class="rule"></div>
+    <p>O Grupo Semeia propõe à Hot Dog Yracema o <b>Yracema Gestão</b>: um sistema próprio que troca as planilhas e o WhatsApp por um fluxo único de pedido de produção, fechamento de caixa e relatórios, para as 7 lojas atuais e para as que vierem.</p>
+    <p>O objetivo é o que o próprio questionário pediu: <b>eliminar planilhas, reduzir erros, melhorar o controle financeiro e padronizar os processos</b>. O resultado mais esperado é um fechamento de caixa fácil e padronizado, tanto para o gerente na loja quanto para a gestão no fim do mês.</p>
+    <div class="callout">A proposta tem duas fases. A <b>Fase 1 (MVP)</b> entrega o que é urgente e indispensável. A <b>Fase 2</b> acrescenta estoque, produção por setor, alertas e indicadores financeiros, contratada por módulo, quando fizer sentido para o negócio.</div>
+  </section>
+
+  <!-- 2 -->
+  <section class="nb">
+    <div class="sec-head"><div class="num">2</div><h2>Entendimento do cenário</h2></div><div class="rule"></div>
+    <p>A operação de 7 lojas depende hoje de planilhas Excel online e do PDV Connect Plug, e é nesses pontos manuais que nascem os erros. As informações vêm do questionário de levantamento respondido em 15/09/2026.</p>
+    <h3>A rede</h3>
+    <ul>
+      <li>7 lojas próprias em Curitiba, Araucária, São José dos Pinhais e Fazenda Rio Grande; meta de 10 ou mais lojas em 2 anos.</li>
+      <li>Cozinha central com setores de salada, maionese, pão, câmaras frias, carnes e depósito de embalagens. A lista de produção segue com o motorista que abastece as lojas.</li>
+      <li>Catálogo de cerca de 85 produtos; muitos não são pedidos todo dia, e o pedido muda conforme o dia da semana.</li>
+    </ul>
+    <h3>As dores relatadas</h3>
+    <div class="pain">
+      <div><b>Fechamento de caixa.</b> Cada gerente fecha o dia numa planilha; no fim do mês os dados são juntados e o fechamento sempre apresenta divergências.</div>
+      <div><b>Pedido de produção.</b> As lojas lançam o pedido, em geral depois das 22h, na mesma planilha. Um lançamento no lugar errado gera problema, e uma gestora arruma, salva e limpa a lista todos os dias à mão.</div>
+      <div><b>Produção sem controle.</b> O cálculo do que fabricar é aproximado, feito sobre a planilha dos pedidos das 7 lojas.</div>
+      <div><b>Estoque sem controle.</b> Não há controle de perdas nem inventário periódico.</div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="sec-head"><div class="num">3</div><h2>A solução</h2></div><div class="rule"></div>
+    <p>O Yracema Gestão é um aplicativo web instalável no celular, com um banco de dados central na nuvem que todas as lojas e a gestão compartilham, sempre com a mesma informação.</p>
+    <h3>Como funciona no dia a dia</h3>
+    <ol>
+      <li>O gerente lança o pedido de produção da loja no celular, escolhendo os produtos do catálogo.</li>
+      <li>A cozinha central vê o pedido de todas as lojas já somado por produto, sem planilha e sem limpeza manual.</li>
+      <li>No fim do dia, o gerente faz o fechamento de caixa. O sistema confere sozinho se os números batem.</li>
+      <li>O financeiro confere os fechamentos e a gestão acompanha tudo no painel e nos relatórios, exportando para Excel quando precisar.</li>
+    </ol>
+    <h3>Tecnologia</h3>
+    <div class="grid">
+      <div class="card g"><h4>Cloudflare</h4><p>Aplicação em Cloudflare Workers e banco de dados Cloudflare D1: rápido, seguro, de custo muito baixo nessa escala e sem servidor para manter.</p></div>
+      <div class="card g"><h4>Funciona sem internet</h4><p>O gerente lança pedido e fechamento mesmo offline. O envio fica guardado no aparelho e segue sozinho quando a conexão volta.</p></div>
+      <div class="card g"><h4>Acesso por perfil</h4><p>Cada pessoa vê apenas o que é da sua função. O gerente enxerga somente a própria loja.</p></div>
+      <div class="card g"><h4>Cresce com a rede</h4><p>Abrir uma nova loja exige apenas um cadastro. Código versionado no GitHub e desenvolvido com apoio do Claude, o que permite evoluir com rapidez.</p></div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="pb">
+    <div class="sec-head"><div class="num">4</div><h2>Fase 1 — MVP: módulos entregues</h2></div><div class="rule"></div>
+    <p>Sete módulos que resolvem as duas dores mais urgentes, o pedido de produção e o fechamento de caixa, e já incluem os relatórios que o cliente apontou como indispensáveis.</p>
+    <div class="grid">
+      <div class="card"><h4><small>Módulo 1</small>Acesso e perfis</h4><p>Login por e-mail e senha, com cinco perfis: gerente, financeiro, administração, diretor e proprietário. O gerente vê só a própria loja; apenas administração, diretoria e proprietário alteram cadastros.</p></div>
+      <div class="card"><h4><small>Módulo 2</small>Cadastros</h4><p>Lojas, catálogo de produtos por categoria (pães, salsichas, molhos, embalagens, batata, carnes, outros) e usuários. Itens podem ser desativados sem perder o histórico. Nova loja entra com um cadastro.</p></div>
+      <div class="card"><h4><small>Módulo 3</small>Pedido de produção</h4><p>O gerente escolhe a data e informa a quantidade de cada produto. O pedido pode ser alterado até o início da produção do dia, quando trava; reenviar o mesmo dia apenas atualiza, sem duplicar.</p></div>
+      <div class="card"><h4><small>Módulo 4</small>Consolidação da produção</h4><p>O sistema soma o pedido das lojas por produto, mostra a quantidade de cada loja e aponta quem ainda não enviou. A lista pode ser impressa. Acaba a limpeza manual diária.</p></div>
+      <div class="card full y"><h4><small>Módulo 5</small>Fechamento de caixa</h4>
+        <p>O gerente registra recebimentos por forma de pagamento (dinheiro, PIX, crédito, débito, voucher e iFood), sangrias, despesas, cancelamentos e estornos, o total do relatório do sistema (Connect Plug), o total da maquininha e o dinheiro contado.</p>
+        <p style="margin-top:8px">O sistema confere três pontos automaticamente: <b>recebimentos × sistema</b>, <b>crédito + débito × maquininha</b> e <b>dinheiro contado × esperado</b> (dinheiro recebido menos sangrias e despesas). Qualquer diferença aparece na hora. O financeiro confere o fechamento, que fica travado; só a administração pode reabri-lo.</p></div>
+      <div class="card"><h4><small>Módulo 6</small>Relatórios</h4><p>Diário, semanal, mensal, por loja e por produto, filtráveis por período e loja, com <b>exportação em Excel (.xlsx)</b>. Encerra as divergências do fechamento mensal, pois os números vêm direto do sistema.</p></div>
+      <div class="card"><h4><small>Módulo 7</small>Painel e aplicativo mobile</h4><p>Painel do dia com faturamento, lojas sem pedido, lojas sem fechamento e divergências. App instalável no celular (PWA), pensado para telas pequenas e com modo offline.</p></div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="pb">
+    <div class="sec-head"><div class="num">5</div><h2>Fase 2 — módulos adicionais</h2></div><div class="rule"></div>
+    <p>A Fase 2 cobre o que o cliente marcou como prioridade máxima mas que não é indispensável para a primeira versão: estoque e produção. Cada módulo pode ser contratado separadamente.</p>
+    <div class="grid">
+      <div class="card y"><h4><small>Módulo 8</small>Estoque, inventário e perdas</h4><p>Estoque central e de cada loja, entradas e saídas, inventário periódico e registro de perdas. Hoje não existe nenhum controle disso. Habilita também os indicadores de consumo.</p></div>
+      <div class="card y"><h4><small>Módulo 9</small>Produção por setor e motorista</h4><p>Divisão do que será produzido pelos setores da cozinha, controle do produzido e lista de entrega por loja para o motorista. Inclui sugestão de pedido conforme o dia da semana.</p></div>
+      <div class="card y"><h4><small>Módulo 10</small>Alertas e notificações</h4><p>Avisos por notificação no celular ou WhatsApp: loja sem pedido, loja sem fechamento, estoque baixo e divergência financeira. No MVP isso aparece no painel; aqui o sistema avisa sozinho.</p></div>
+      <div class="card y"><h4><small>Módulo 11</small>Dashboard financeiro</h4><p>Faturamento, despesas, consumo e lucro por loja e para a rede, com comparativos entre períodos.</p></div>
+      <div class="card y"><h4><small>Módulo 12</small>Anexos e comprovantes</h4><p>Anexar ao fechamento o relatório da maquininha, o relatório do sistema e os comprovantes.</p></div>
+      <div class="card y"><h4><small>Módulo 13 · sob consulta</small>Integrações</h4><p>Connect Plug, para trazer os totais de venda automaticamente, e iFood. Orçadas à parte, pois dependem de o fornecedor disponibilizar API ou exportação.</p></div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="nb">
+    <div class="sec-head"><div class="num">6</div><h2>Implantação e cronograma</h2></div><div class="rule"></div>
+    <p>O MVP já está construído e testado; a implantação leva cerca de 4 semanas, em etapas que reduzem o risco para a operação. Os prazos são estimativas e dependem da agilidade do cliente em validar e fornecer o catálogo de produtos.</p>
+    <div class="timeline">
+      <div class="step"><div class="dot">1</div><div><b>Semana 1</b><span>Homologação e cadastros: lojas, ~85 produtos e usuários</span></div></div>
+      <div class="step"><div class="dot">2</div><div><b>Semana 2</b><span>Piloto numa loja e na cozinha central, em paralelo com a planilha</span></div></div>
+      <div class="step"><div class="dot">3</div><div><b>Semana 3</b><span>Implantação nas 7 lojas e treinamento</span></div></div>
+      <div class="step"><div class="dot">4</div><div><b>Semana 4</b><span>Acompanhamento e 1º fechamento mensal pelo sistema</span></div></div>
+      <div class="step"><div class="dot">5</div><div><b>Depois</b><span>Fase 2: módulos entregues em ciclos de 2 a 4 semanas</span></div></div>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="pb">
+    <div class="sec-head"><div class="num">7</div><h2>Investimento</h2></div><div class="rule"></div>
+    <p>A Fase 1 custa <b>R$ 5.000 de implantação</b> (pagamento único) mais <b>R$ 300 por loja por mês</b>. Com as 7 lojas atuais, o primeiro ano soma <b>R$ 30.200</b>.</p>
+    <div class="price-grid">
+      <div class="price"><small>Implantação do MVP</small><div class="v">R$ 5.000 <i>único</i></div><p>7 módulos da Fase 1, cadastros iniciais, piloto, treinamento e acompanhamento.</p></div>
+      <div class="price alt"><small>Mensalidade Fase 1</small><div class="v">R$ 300 <i>por loja/mês</i></div><p>Hospedagem, banco de dados, backup, suporte e correções. 7 lojas: R$ 2.100/mês.</p></div>
+      <div class="price hl"><small>Mensalidade com Fase 2 completa</small><div class="v">R$ 400 <i>por loja/mês</i></div><p>Estoque, produção, alertas e indicadores no ar. 7 lojas: R$ 2.800/mês.</p></div>
+    </div>
+    <h3>Fase 1 — MVP</h3>
+    <table>
+      <tr><th>Item</th><th>Valor</th><th>Observação</th></tr>
+      <tr><td>Implantação do MVP</td><td>R$ 5.000 (único)</td><td>Módulos 1 a 7, cadastros, piloto, treinamento</td></tr>
+      <tr><td>Mensalidade</td><td>R$ 300 por loja/mês</td><td>Hospedagem, backup, suporte e correções</td></tr>
+      <tr><td>Com 7 lojas (hoje)</td><td>R$ 2.100/mês</td><td>R$ 25.200 por ano</td></tr>
+      <tr><td>Com 10 lojas (meta em 2 anos)</td><td>R$ 3.000/mês</td><td>R$ 36.000 por ano</td></tr>
+      <tr><td>Mensalidade com a Fase 2 completa</td><td>R$ 400 por loja/mês</td><td>R$ 2.800/mês com 7 lojas; R$ 4.000 com 10 lojas</td></tr>
+    </table>
+    <p>A mensalidade de cada loja passa a contar a partir da entrada dela no sistema. Uma nova loja entra com um cadastro, sem custo de implantação.</p>
+    <h3>Fase 2 — módulos opcionais (pagamento único por módulo)</h3>
+    <table>
+      <tr><th>Módulo</th><th>Valor</th></tr>
+      <tr><td>Estoque, inventário e perdas</td><td>R$ 2.500</td></tr>
+      <tr><td>Produção por setor e lista do motorista</td><td>R$ 2.000</td></tr>
+      <tr><td>Alertas e notificações</td><td>R$ 1.200</td></tr>
+      <tr><td>Dashboard financeiro</td><td>R$ 2.500</td></tr>
+      <tr><td>Anexos de fotos e comprovantes</td><td>Incluído no pacote completo; avulso sob consulta</td></tr>
+      <tr><td>Integração Connect Plug / iFood</td><td>Sob consulta</td></tr>
+      <tr class="total"><td>Pacote completo da Fase 2 (sem integrações)</td><td>R$ 6.500 <span style="font-weight:400">(em vez de R$ 8.200 avulsos)</span></td></tr>
+    </table>
+    <h3>Condições</h3>
+    <ul>
+      <li>A mensalidade é reajustada uma vez por ano pelo IPCA.</li>
+      <li>Com o pacote completo da Fase 2 contratado, a mensalidade passa a R$ 400 por loja por mês, combinada já na contratação. Módulos avulsos da Fase 2 têm mensalidade combinada na contratação de cada um.</li>
+      <li>Forma de pagamento da implantação a combinar.</li>
+    </ul>
+  </section>
+
+  <!-- 8 -->
+  <section class="nb">
+    <div class="sec-head"><div class="num">8</div><h2>Premissas, escopo e pontos a validar</h2></div><div class="rule"></div>
+    <div class="grid">
+      <div class="card"><h4>Premissas</h4><ul style="font-size:14px;margin:8px 0 0">
+        <li>O pedido trava para o gerente quando a produção do dia começa (padrão 06:00), a confirmar com o cliente.</li>
+        <li>A maquininha cobre crédito e débito; despesas saem do dinheiro do caixa. Cancelamentos e estornos são informativos.</li>
+        <li>No MVP o gerente digita os totais do sistema e da maquininha.</li>
+        <li>O cliente fornece produtos, lojas e usuários para o cadastro inicial.</li></ul></div>
+      <div class="card"><h4>Fora do escopo</h4><ul style="font-size:14px;margin:8px 0 0">
+        <li>Integrações com terceiros (Connect Plug, iFood, ERP, contabilidade, banco).</li>
+        <li>Migração do histórico das planilhas atuais.</li>
+        <li>Equipamentos: celulares, impressoras, leitores.</li>
+        <li>Módulos da Fase 2, contratados à parte.</li></ul></div>
+      <div class="card full g"><h4>Pontos a validar com o cliente</h4><ul style="font-size:14px;margin:8px 0 0">
+        <li>O Connect Plug oferece API ou exportação de dados?</li>
+        <li>Qual o melhor horário para travar o pedido, e quem pode alterá-lo depois?</li>
+        <li>O pedido muda conforme o dia da semana: o cliente quer quantidades-padrão por dia?</li>
+        <li>A despesa sai sempre do dinheiro do caixa?</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="nb">
+    <div class="sec-head"><div class="num">9</div><h2>Próximos passos e aceite</h2></div><div class="rule"></div>
+    <p>Para iniciar, basta o aceite desta proposta e a confirmação dos pontos em aberto.</p>
+    <ol><li>Aceite da proposta e definição da forma de pagamento da implantação.</li><li>Envio da lista de produtos, lojas e responsáveis de cada unidade.</li><li>Início da Semana 1: homologação e cadastros.</li></ol>
+    <div class="sign"><div>Grupo Semeia Digital</div><div>Hot Dog Yracema — nome, assinatura e data</div></div>
+  </section>
+
+  <footer>
+    <img src="assets/logo-semeia.png" alt="Grupo Semeia Digital">
+    <div><b>Grupo Semeia Digital</b>Tecnologia que conecta. <em>Propósito que transforma.</em><br>© 2026 Grupo Semeia Digital · CNPJ 69.290.380/0001-42</div>
+  </footer>
+</div>
+</body>
+</html>

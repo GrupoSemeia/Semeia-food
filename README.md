@@ -28,7 +28,7 @@ Substitui as planilhas de Excel/WhatsApp no **pedido diário de produção** e n
 
 ## Fase 2 (fora do MVP)
 Estoque central/por loja, inventário e perdas · produção por setor e lista do motorista · alertas (push/WhatsApp) · dashboard financeiro (lucro, despesas, consumo) · anexos de fotos/comprovantes (R2) · integração Connect Plug / iFood.
-Veja [`docs/proposta-comercial.md`](docs/proposta-comercial.md).
+Veja [`docs/proposta-comercial.md`](docs/proposta-comercial.md) e a versão com a identidade visual do Grupo Semeia Digital: [`docs/proposta-comercial.html`](docs/proposta-comercial.html) / [PDF](docs/proposta-comercial-yracema-gestao.pdf).
 
 ## Rodando localmente
 ```bash
