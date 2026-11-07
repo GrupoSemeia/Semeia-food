@@ -2,7 +2,6 @@ export type Role = 'gerente' | 'financeiro' | 'administracao' | 'diretor' | 'pro
 
 export interface Env {
   DB: D1Database;
-  ASSETS: Fetcher;
   JWT_SECRET?: string;
   ORDER_CUTOFF: string;
 }

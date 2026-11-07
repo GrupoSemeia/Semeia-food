@@ -1,18 +1,13 @@
 name = "yracema"
 main = "src/index.ts"
 compatibility_date = "2025-01-01"
-
-[assets]
-directory = "./public"
-binding = "ASSETS"
-not_found_handling = "single-page-application"
-run_worker_first = ["/api/*"]
+workers_dev = true
+preview_urls = false
 
 [[d1_databases]]
 binding = "DB"
 database_name = "yracema"
-# Rode `npx wrangler d1 create yracema` e cole o database_id aqui.
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "5e496d3d-1435-41e6-8631-130ad4643086"
 migrations_dir = "migrations"
 
 [vars]

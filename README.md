@@ -33,6 +33,7 @@ Veja [`docs/proposta-comercial.md`](docs/proposta-comercial.md) e a versão com 
 ## Rodando localmente
 ```bash
 npm install
+echo 'JWT_SECRET=troque-por-um-segredo-longo-local' > .dev.vars   # só para rodar localmente
 npm run db:migrate:local     # cria o banco D1 local
 npm run dev                  # http://localhost:8787
 node scripts/seed-demo.mjs   # (opcional) lojas/produtos de exemplo; login dono@yracema.demo / demo123
@@ -41,13 +42,17 @@ npm test                     # teste de fumaça da API (use banco local limpo)
 No primeiro acesso sem usuários, a tela de login pede para criar o **proprietário**.
 
 ## Deploy na Cloudflare
+Publicado na conta **Grupo Semeia Digital**: https://yracema.gruposemeiadigital.workers.dev (Worker `yracema`, banco D1 `yracema`).
+
+Para publicar de novo, ou em outra conta:
 ```bash
 npx wrangler login
 npx wrangler d1 create yracema            # copie o database_id para wrangler.toml
 npm run db:migrate:remote
-npx wrangler secret put JWT_SECRET        # segredo longo e aleatório (obrigatório em produção)
-npm run deploy
+openssl rand -base64 48 | npx wrangler secret put JWT_SECRET   # obrigatório: sem ele o login não funciona
+npm run deploy                            # embute public/ no Worker e publica
 ```
+O front (`public/`) é embutido no Worker por `scripts/build-static.mjs` (gera `src/static.ts`, que não vai para o git).
 Custo esperado nessa escala: dentro do plano gratuito/US$ 5 da Cloudflare.
 
 ## Estrutura

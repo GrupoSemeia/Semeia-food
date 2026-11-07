@@ -47,7 +47,11 @@ export async function verifyPassword(password: string, stored: string) {
   return diff === 0;
 }
 
-export const secretOf = (env: { JWT_SECRET?: string }) => env.JWT_SECRET ?? 'dev-secret-change-me';
+export const secretOf = (env: { JWT_SECRET?: string }) => {
+  // Sem segredo configurado o sistema não inicia sessões (evita tokens forjáveis em produção).
+  if (!env.JWT_SECRET || env.JWT_SECRET.length < 16) throw new Error('JWT_SECRET não configurado (mín. 16 caracteres)');
+  return env.JWT_SECRET;
+};
 
 export const requireAuth: MiddlewareHandler<AppEnv> = async (c, next) => {
   const header = c.req.header('Authorization') ?? '';

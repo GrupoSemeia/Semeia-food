@@ -5,11 +5,12 @@
   "description": "Yracema - Sistema Integrado de Gestão Operacional (MVP)",
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "build:static": "node scripts/build-static.mjs",
+    "dev": "node scripts/build-static.mjs && wrangler dev",
     "db:migrate:local": "wrangler d1 migrations apply yracema --local",
     "db:migrate:remote": "wrangler d1 migrations apply yracema --remote",
-    "deploy": "wrangler deploy",
-    "typecheck": "tsc --noEmit",
+    "deploy": "node scripts/build-static.mjs && wrangler deploy",
+    "typecheck": "node scripts/build-static.mjs && tsc --noEmit",
     "test": "node --test scripts/smoke.test.mjs"
   },
   "dependencies": {

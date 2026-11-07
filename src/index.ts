@@ -5,6 +5,7 @@ import { adminRoutes } from './modules/admin';
 import { orderRoutes } from './modules/orders';
 import { closingRoutes } from './modules/closings';
 import { dashboardRoutes, reportRoutes } from './modules/reports';
+import { STATIC } from './static';
 
 const app = new Hono<AppEnv>();
 
@@ -16,7 +17,12 @@ app.route('/api/closings', closingRoutes);
 app.route('/api/reports', reportRoutes);
 app.route('/api/dashboard', dashboardRoutes);
 
-app.notFound((c) => (c.req.path.startsWith('/api/') ? c.json({ error: 'Não encontrado' }, 404) : c.env.ASSETS.fetch(c.req.raw)));
+app.notFound((c) => {
+  const path = c.req.path;
+  if (path.startsWith('/api/')) return c.json({ error: 'Não encontrado' }, 404);
+  const file = STATIC[path] ?? STATIC['/index.html'];
+  return new Response(file.body, { headers: { 'Content-Type': file.type, 'Cache-Control': 'no-cache' } });
+});
 app.onError((e, c) => {
   console.error(e);
   return c.json({ error: 'Erro interno' }, 500);
